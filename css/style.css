@@ -1,0 +1,303 @@
+/* start global rules  */
+* {
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    overflow-x: hidden;
+}
+.container {
+    padding: 0px 15px;
+    margin: 0 auto;
+} 
+/* small */
+@media (min-width: 576px) {
+    .container {
+        width: 560px;
+    }
+}
+/* medium  */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Large */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* xLarge  */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+body {
+    font-family: "Open Sans", sans-serif;
+}
+h1, h2 {
+    font-family: "Amatic SC", sans-serif;
+}
+/* end global rules */
+/* start global variables */
+:root {
+    --mainTransation: 0.4s ease-in-out;
+    --mainPadding: 80px;
+    --sectionBG: #ececec;
+    --text-light-color: #37373f;
+    --text-altLight-color: #7f7f90;
+    --main-Lightcolor : #ce1212;
+    --alt-Lightcolor : #E61414;
+    --Bg-Light-mainColor: #fff;
+    --Bg-Light-altColor: #EEEEEE;
+    /* dark 
+    --text-dark-color: #fff;
+    --text-altdark-color: #9f9f9f;
+    --main-Darkcolor: #c17e1f;
+    --alt-Darkcolor: #D78C23;
+    --Bg-Dark-mainColor:#171717;
+    --Bg-Dark-altColor:#252525; */
+}
+
+/* end global variables */
+/* start header section  */
+#head {
+    background-color: var(--Bg-Light-mainColor);
+    width: 100%;
+    padding-block: 25px;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,.2);
+    position: relative;
+    z-index: 3;
+}
+#head .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#head .container .logo a {
+    color: var(--text-light-color);
+    font-size: 30px;
+    position: relative;
+    font-weight: 700;
+    font-family: "Open Sans", sans-serif;
+}
+#head .container .logo a::after{
+    content: ".";
+    position: absolute;
+    right: -5px;
+    bottom: 0;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--main-Lightcolor);
+}
+#head .container nav ul{
+    display: flex;
+}
+#head .container nav ul i{
+    display: none;
+} 
+#head .container .mode a {
+    color: var(--text-light-color);
+}
+#head .container .mode i:last-of-type  {
+    margin-left: 10px;
+    cursor: pointer;
+    display: none;
+}
+@media (max-width: 992px) {
+    #head .container nav ul.links {
+        flex-direction: column;
+        gap: 30px;
+        position: absolute;
+        z-index: 10;
+        right: 0;
+        top: 0;
+        background-color: white;
+        width: 350px;
+        height: 100vh;
+        transition: var(--mainTransation) ;
+        display: none;
+    }
+    #head .container nav ul i {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding:  20px;
+        cursor: pointer;
+        font-size: 20px;
+    }
+    #head .container .mode i:last-of-type {
+        display: inline-block;
+    }
+}
+@media (max-width: 992px) {
+    #head .container nav ul li:first-of-type {
+        margin-top: 60px;
+    }
+}
+#head .container nav ul li {
+    padding-inline: 15px;
+}
+#head .container nav li a {
+    color: var(--text-altLight-color);;
+    position: relative;
+    padding-bottom: 5px;
+    font-size: 17px;
+    transition: var(--mainTransation);
+    font-weight: 700;
+}
+#head .container nav li:not(:first-of-type) a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    background-color: var(--main-Lightcolor);
+    transition: var(--mainTransation);
+    bottom: -2px;
+    left: 0;
+}
+#head .container nav li:not(:first-of-type):hover a {
+    color: var(--text-light-color);
+}
+#head .container nav li:not(:first-of-type):hover a::after {
+    width: 100%;
+}
+#head .container nav li a.active {
+    color: var(--text-light-color);
+    border-bottom: 2px solid var(--main-Lightcolor);
+}
+#head .container .mode i {
+    font-size: 25px;
+}
+/* end header section  */
+/* start landing-page Section  */
+#landing {
+    background-color: var(--Bg-Light-altColor);
+    width: 100%;
+}
+#landing .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: calc(100vh - 91px);
+}
+@media (max-width: 992px) {
+    #landing .container {
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+}
+#landing .container .caption {
+    width: 50%;
+}
+@media (max-width: 992px) {
+    #landing .container .caption {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-block: 20px;
+    }
+}
+#landing .container .caption h1 {
+    font-size: 65px;
+    font-weight: 700;
+    color: var(--text-light-color);
+    margin-bottom: 20px;
+}
+#landing .container .caption p {
+    color: var(--text-altLight-color);
+    margin-bottom: 20px;
+    line-height: 25px;
+}
+#landing .container .buttons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+#landing .container .buttons a.book {
+    background-color: var(--main-Lightcolor);
+    padding: 10px 25px;
+    color: white;
+    border-radius: 0 20px 20px;
+    transition: var(--mainTransation);
+}
+#landing .container .buttons a.book:hover {
+    background-color: var(--alt-Lightcolor);
+}
+#landing .container .buttons .video {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#landing .container .buttons .video a {
+    color: var(--text-light-color);
+    transition: var(--mainTransation);
+}
+#landing .container .buttons .video .play{
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: var(--Bg-Light-mainColor);
+    position: relative;
+}
+#landing .container .buttons .video i{
+    color: var(--text-light-color);
+    font-size: 21px;
+    cursor: pointer;
+    transition: var(--mainTransation);
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+}
+#landing .container .buttons .video:hover a,
+#landing .container .buttons .video:hover i {
+    color: var(--alt-Lightcolor);
+}
+#landing .container .img-holder {
+    width: 40%;
+}
+@media (max-width: 992px) {
+    #landing .container .img-holder {
+        width: 60%;
+    }
+}
+@media (max-width: 766px) {
+    #landing .container .img-holder {
+        width:80%;
+    }
+}
+#landing .container .img-holder img {
+    max-width: 100%;
+    filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.6));
+}
+#landing .container .img-holder:hover img {
+    animation: shakeIt 0.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes shakeIt {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+/* end landing-page Section  */

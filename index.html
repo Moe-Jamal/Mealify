@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mealify</title>
+        <!-- Project Icon -->
+        <link rel="shortcut icon" href="images/logo.jpg">
+        <!-- Font Awsome  -->
+        <link rel="stylesheet" href="css/all.min.css">
+        <!-- Main Css File  -->
+        <link rel="stylesheet" href="css/style.css">
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- start header section -->
+    <header id="head">
+        <div class="container">
+            <div class="logo">
+                <a href="#">Mealify</a>
+            </div>
+            <nav>
+                <ul class="links">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Chefs</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <i onclick="hideLinks()" class="fa-solid fa-xmark"></i>
+                </ul>
+            </nav>
+            <div class="mode">
+                <i class="fa-solid fa-moon"></i>
+                <i onclick="showLinks()" class="fa-solid fa-bars mobile-links"></i>
+            </div>
+        </div>
+    </header>
+    <!-- end header section -->
+    <!-- start landing-page section  -->
+    <section id="landing">
+        <div class="container">
+            <div class="caption">
+                <h1>Enjoy Your Healthy<br>Delicious Food</h1>
+                <p>Sed autem laudantium dolores. Voluptatem itaque ea consequatur eveniet. Eum quas beatae cumque eum quaerat.</p>
+                <div class="buttons">
+                    <a href="#" class="book">Book a Table</a>
+                    <div class="video">
+                        <div class="play"><i class="fa-solid fa-play"></i></div>
+                        <a href="#">Watch a Video</a>
+                    </div>
+                </div>
+            </div>
+            <div class="img-holder">
+                <img src="images/hero-img.png" alt="landing-img">
+            </div>
+        </div>
+    </section>
+    <!-- end landing-page section  -->
+<script>
+    let navLinks = document.querySelector('.links')
+    function showLinks() {
+        navLinks.style.cssText = "display: flex;";
+    }
+    function hideLinks() {
+        navLinks.style.cssText = "display:none;"
+    }
+    function resizeCheck() {
+        if (window.innerWidth > 992) {
+            navLinks.style.cssText = "display: flex;";
+        } else if (window.innerWidth < 992) {
+            navLinks.style.cssText = "display: none;";
+        }
+    }
+    window.addEventListener('resize', resizeCheck)
+</script>
+</body>
+</html>
