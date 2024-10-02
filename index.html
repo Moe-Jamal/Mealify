@@ -58,22 +58,37 @@
         </div>
     </section>
     <!-- end landing-page section  -->
+    <!-- start chefs section  -->
+    <!-- <section id="chefs">
+        <div class="container">
+            <div class="heading">
+                <span>CHEFS</span>
+                <h2>Our <span>Profesional</span> Chefs</h2>
+            </div>
+            <div class="chef-info">
+                <div class="img-holder">
+                    <img src="" alt="">
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- end chefs section  -->
 <script>
     let navLinks = document.querySelector('.links')
     function showLinks() {
-        navLinks.style.cssText = "display: flex;";
+        navLinks.style.cssText = "right: 0;";
     }
     function hideLinks() {
-        navLinks.style.cssText = "display:none;"
+        navLinks.style.cssText = "right: -100%;"
     }
-    function resizeCheck() {
-        if (window.innerWidth > 992) {
-            navLinks.style.cssText = "display: flex;";
-        } else if (window.innerWidth < 992) {
-            navLinks.style.cssText = "display: none;";
-        }
-    }
-    window.addEventListener('resize', resizeCheck)
+    // function resizeCheck() {
+    //     if (window.innerWidth > 992) {
+    //         navLinks.style.cssText = "display: flex;";
+    //     } else if (window.innerWidth < 992) {
+    //         navLinks.style.cssText = "display: none;";
+    //     }
+    // }
+    // window.addEventListener('resize', resizeCheck)
 </script>
 </body>
 </html>
