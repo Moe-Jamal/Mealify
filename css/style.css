@@ -84,20 +84,20 @@ h1, h2 {
 :root {
     --mainTransation: 0.4s ease-in-out;
     --mainPadding: 80px;
-    --sectionBG: #ececec;
     --text-light-color: #37373f;
     --text-altLight-color: #7f7f90;
     --main-Lightcolor : #ce1212;
     --alt-Lightcolor : #E61414;
     --Bg-Light-mainColor: #fff;
     --Bg-Light-altColor: #EEEEEE;
-    /* dark 
-    --text-dark-color: #fff;
-    --text-altdark-color: #9f9f9f;
-    --main-Darkcolor: #c17e1f;
-    --alt-Darkcolor: #D78C23;
-    --Bg-Dark-mainColor:#171717;
-    --Bg-Dark-altColor:#252525; */
+}
+.dark-mode {
+    --text-light-color: #fff;
+    --text-altLight-color: #9f9f9f;
+    --main-Lightcolor : #c17e1f;
+    --alt-Lightcolor : #D78C23;
+    --Bg-Light-mainColor: #171717;
+    --Bg-Light-altColor: #252525;
 }
 /* end global variables */
 /* start header section  */
@@ -144,7 +144,7 @@ h1, h2 {
 #head .container nav ul i{
     display: none;
 } 
-#head .container .mode a {
+#head .container .mode i {
     color: var(--text-light-color);
 }
 #head .container .mode i:last-of-type  {
@@ -289,7 +289,7 @@ h1, h2 {
 #landing .container .buttons a.book {
     background-color: var(--main-Lightcolor);
     padding: 10px 25px;
-    color: white;
+    color: var(--Bg-Light-mainColor);
     border-radius: 0 20px 20px;
     transition: var(--mainTransation);
 }
@@ -373,6 +373,7 @@ h1, h2 {
 /* start chefs section */
 #chefs {
     padding-block: var(--mainPadding);
+    background-color: var(--Bg-Light-mainColor);
 }
 #chefs .cards {
     display: flex;
@@ -382,7 +383,7 @@ h1, h2 {
 #chefs .chef-info {
     width: calc((100%/3) - 20px);
     position: relative;
-    box-shadow: 0 0 10px #ddd;
+    box-shadow: 0 0 15px var(--Bg-Light-altColor);
     border-radius: 10px;
     transition: var(--mainTransation);
     overflow: hidden;
@@ -444,12 +445,12 @@ h1, h2 {
     margin-block: 10px;
 }
 #chefs .chef-info .links ul a {
-    color: var(--text-altLight-color);
+    color: #7f7f90;
     font-size: 18px;
     transition: var(--mainTransation);
 }
 #chefs .chef-info .links ul li:hover a {
-    color: var(--text-light-color);
+    color: #37373f;
 }
 #chefs .chef-info:hover {
     transform: scale(1.05);
@@ -559,6 +560,7 @@ h1, h2 {
 /* start contact section  */
 #contact {
     padding-block: var(--mainPadding);
+    background-color: var(--Bg-Light-mainColor);
 }
 #contact .contact-us {
     display: flex;
@@ -624,6 +626,16 @@ h1, h2 {
         font-size: 14px;
     }
 }
+@media (max-width: 576px) {
+    #contact .info .item .caption a,
+    #contact .info .item .caption p {
+        font-size: 12px;
+    }
+    #contact .contact-us .info .item {
+        padding: 20px 10px;
+    }
+}
+
 #contact .info .item .caption span {
     font-weight: bold;
 }
@@ -631,7 +643,7 @@ h1, h2 {
     display: flex;
     flex-direction: column;
     background-color: var(--Bg-Light-mainColor);
-    box-shadow: 0 0 10px #ddd;
+    box-shadow: 0 0 15px var(--Bg-Light-altColor);
     gap: 15px;
     padding: 20px;
 }
