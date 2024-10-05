@@ -83,7 +83,7 @@ h1, h2 {
 /* start global variables */
 :root {
     --mainTransation: 0.4s ease-in-out;
-    --mainPadding: 80px;
+    --mainPadding: 90px;
     --text-light-color: #37373f;
     --text-altLight-color: #7f7f90;
     --main-Lightcolor : #ce1212;
@@ -143,9 +143,11 @@ h1, h2 {
 }
 #head .container nav ul i{
     display: none;
-} 
+}
 #head .container .mode i {
     color: var(--text-light-color);
+    font-size: 25px;
+    cursor: pointer;
 }
 #head .container .mode i:last-of-type  {
     margin-left: 10px;
@@ -160,7 +162,7 @@ h1, h2 {
         z-index: 10;
         right: -100%;
         top: 0;
-        background-color: white;
+        background-color: var(--Bg-Light-mainColor);
         width: 350px;
         height: 100vh;
         transition: var(--mainTransation) ;
@@ -178,6 +180,7 @@ h1, h2 {
         padding:  20px;
         cursor: pointer;
         font-size: 20px;
+        color: var(--text-light-color);
     }
     #head .container .mode i:last-of-type {
         display: inline-block;
@@ -199,28 +202,25 @@ h1, h2 {
     transition: var(--mainTransation);
     font-weight: 700;
 }
-#head .container nav li:not(:first-of-type) a::after {
+#head .container nav li a::after {
     content: "";
     width: 0;
     height: 2px;
     position: absolute;
     background-color: var(--main-Lightcolor);
-    transition: var(--mainTransation);
     bottom: -2px;
     left: 0;
+    transition: var(--mainTransation);
 }
-#head .container nav li:not(:first-of-type):hover a {
+#head .container nav li:hover a {
     color: var(--text-light-color);
 }
-#head .container nav li:not(:first-of-type):hover a::after {
+#head .container nav li:hover a::after {
     width: 100%;
 }
 #head .container nav li a.active {
     color: var(--text-light-color);
     border-bottom: 2px solid var(--main-Lightcolor);
-}
-#head .container .mode i {
-    font-size: 25px;
 }
 /* end header section  */
 /* start landing-page Section  */
@@ -408,7 +408,7 @@ h1, h2 {
     width: 100%;
     border-radius: 10px;
 }
-#chefs .img-holder .overlay {
+#chefs .img-holder .overlay-chef {
     width: 100%;
     position: absolute;
     bottom: 0; 
@@ -696,5 +696,6 @@ h1, h2 {
 }
 #contact .contact-us form button:hover {
     background-color: var(--alt-Lightcolor);
+    
 }
 /* start contact section  */
