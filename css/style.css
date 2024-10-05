@@ -802,6 +802,11 @@ footer .container .sub .sub-mail input {
     flex-grow: 1;
     padding: 10px;
     outline: none;
+    border: 1px solid var(--text-altLight-color);
+    transition: 0.2s ease-in;
+}
+footer .container .sub .sub-mail input:focus {
+    border-color: var(--main-Lightcolor);
 }
 footer .container .sub .sub-mail button {
     padding: 10px 20px;
