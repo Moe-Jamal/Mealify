@@ -24,7 +24,7 @@
             </div>
             <nav>
                 <ul class="links">
-                    <li><a href="#landing" class="active section-link" >Home</a></li>
+                    <li><a href="#home" class="active section-link" >Home</a></li>
                     <li><a href="#chefs" class="section-link">Chefs</a></li>
                     <li><a href="#gallery" class="section-link">Gallery</a></li>
                     <li><a href="#contact" class="section-link">Contact</a></li>
@@ -39,7 +39,7 @@
     </header>
     <!-- end header section -->
     <!-- start landing-page section  -->
-    <section id="landing">
+    <section id="home">
         <div class="container">
             <div class="caption">
                 <h1>Enjoy Your Healthy<br>Delicious Food</h1>
@@ -195,7 +195,6 @@
     </section>
     <!-- end gallery section -->
     <!-- start contact section  -->
-    <!-- end contact section  -->
     <section id="contact">
         <div class="container">
             <div class="heading">
@@ -252,49 +251,63 @@
             </div>
         </div>
     </section>
-<script>
-    let navLinks = document.querySelector('.links')
-    function showLinks() {
-        navLinks.style.cssText = "right: 0;";
-    }
-    function hideLinks() {
-        navLinks.style.cssText = "right: -100%;"
-    }
-    let btnSwitch = document.querySelector('.switch');
-    let chefSvg = document.querySelectorAll('.overlay-chef');
-    btnSwitch.onclick = function() {
-        document.body.classList.toggle("dark-mode");
-        if(document.body.classList.contains("dark-mode")){
-            btnSwitch.classList.remove("fa-moon");
-            btnSwitch.classList.add("fa-sun") ;
-            chefSvg.forEach( item => {
-                item.src = "./images/team-shape-dark.svg";
-            });
-        } else {
-            btnSwitch.classList.remove("fa-sun");
-            btnSwitch.classList.add("fa-moon");
-            chefSvg.forEach(item => {
-                item.src = "./images/team-shape.svg";
-            });
-        }
-    }
-    let navLinkss = document.querySelectorAll('.section-link');
-    navLinkss.forEach(navLink => {
-        navLink.addEventListener('click', () => {
-            document.querySelector('.active').classList.remove('active');
-            navLink.style.cssText = "transition: none;"
-            navLink.classList.add('active')
-        })
-    })
-
-    // function resizeCheck() {
-    //     if (window.innerWidth > 992) {
-    //         navLinks.style.cssText = "display: flex;";
-    //     } else if (window.innerWidth < 992) {
-    //         navLinks.style.cssText = "display: none;";
-    //     }
-    // }
-    // window.addEventListener('resize', resizeCheck)
-</script>
+    <!--   end contact section  -->
+    <!-- start footer  -->
+    <footer>
+        <div class="container">
+            <div class="about">
+                <div class="logo">
+                    <img src="images/favicon.png" alt="logo">
+                    <a href="#">Mealify</a>
+                </div>
+                <p>Mealify is a restaurant landing page that offers a delicious dining experience to its customers.</p>
+                <h3>Social Media</h3>
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-google-plus-g"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+            <div class="sub">
+                <h3>Subscribe our Newsletter</h3>
+                <p>Don't miss out on our latest menu updates and exclusive offers - join our newsletter today and stay up-to-date with all things Mealify!</p>
+                <div class="sub-mail">
+                    <input type="text" name="subMail" placeholder="Enter Your Email Address">
+                    <button><i class="fa-solid fa-envelope"></i> Subscribe</button>
+                </div>
+                <div class="links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Menu</a></li>
+                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Promo</a></li>
+                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Contact</a></li>
+                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Testimonial</a></li>
+                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Our Partners</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="contact">
+                <h3>Get in Touch</h3>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>A108 Adam Street, New York, NY 535022</p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>contact@example.com</p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <p>+1 5589 55488 55</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer  -->
+<script src="./js/script.js"></script>
 </body>
 </html>
