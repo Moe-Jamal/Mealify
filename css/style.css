@@ -9,9 +9,7 @@
 html {
     scroll-behavior: smooth;
 }
-body {
-    overflow-x: hidden;
-}
+
 .container {
     padding: 0px 15px ;
     margin: 0 auto;
@@ -59,6 +57,26 @@ h1, h2 {
     font-family: "Amatic SC", sans-serif;
 }
 /* end global rules */
+/* start global variables */
+:root {
+    --mainTransation: 0.4s ease-in-out;
+    --mainPadding: 90px;
+    --text-light-color: #37373f;
+    --text-altLight-color: #7f7f90;
+    --main-Lightcolor : #ce1212;
+    --alt-Lightcolor : #E61414;
+    --Bg-Light-mainColor: #fff;
+    --Bg-Light-altColor: #EEEEEE;
+}
+.dark-mode {
+    --text-light-color: #fff;
+    --text-altLight-color: #9f9f9f;
+    --main-Lightcolor : #c17e1f;
+    --alt-Lightcolor : #D78C23;
+    --Bg-Light-mainColor: #171717;
+    --Bg-Light-altColor: #252525;
+}
+/* end global variables */
 /* start heading  */
 .heading {
     text-align: center;
@@ -85,26 +103,32 @@ h1, h2 {
     }
 }
 /* end heading  */
-/* start global variables */
-:root {
-    --mainTransation: 0.4s ease-in-out;
-    --mainPadding: 90px;
-    --text-light-color: #37373f;
-    --text-altLight-color: #7f7f90;
-    --main-Lightcolor : #ce1212;
-    --alt-Lightcolor : #E61414;
-    --Bg-Light-mainColor: #fff;
-    --Bg-Light-altColor: #EEEEEE;
+/* scroll to top  */
+.top {
+    position: fixed;
+    bottom: 10px;
+    right: -45px;
+    background-color: var(--main-Lightcolor);
+    color: var(--Bg-Light-mainColor);
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 666;
+    transition: 0.3s ease-in-out;
+    opacity: 0;
 }
-.dark-mode {
-    --text-light-color: #fff;
-    --text-altLight-color: #9f9f9f;
-    --main-Lightcolor : #c17e1f;
-    --alt-Lightcolor : #D78C23;
-    --Bg-Light-mainColor: #171717;
-    --Bg-Light-altColor: #252525;
+.top i {
+    font-size: 15px;
 }
-/* end global variables */
+.top.show {
+    right: 15px;
+    opacity: 1;
+}
+/* end to top  */
 /* start header section  */
 #head {
     background-color: var(--Bg-Light-mainColor);

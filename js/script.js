@@ -44,3 +44,21 @@ navLinkss.forEach(link => {
 //     }
 // }
 // window.addEventListener('resize', resizeCheck)
+
+
+// Scroll To Top button 
+let span = document.querySelector(".top");
+
+window.onscroll = function () {
+    if (this.scrollY >= 300) {
+        span.classList.add("show");
+    } else {
+        span.classList.remove("show");
+    }
+};
+span.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+    });
+})
