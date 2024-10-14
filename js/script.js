@@ -47,16 +47,16 @@ navLinkss.forEach(link => {
 
 
 // Scroll To Top button 
-let span = document.querySelector(".top");
+let topIcon = document.querySelector(".top");
 
 window.onscroll = function () {
     if (this.scrollY >= 300) {
-        span.classList.add("show");
+        topIcon.classList.add("show");
     } else {
-        span.classList.remove("show");
+        topIcon.classList.remove("show");
     }
 };
-span.addEventListener('click', () => {
+topIcon.addEventListener('click', () => {
     window.scrollTo({
         top: 0,
         behavior: "smooth",
